@@ -10,7 +10,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'password' => '$2y$10$TKh8H1.PfQx37YgCzwiKb.KjNyWgaHb9cbcoQgdIVFlYg7B77UdFm', // secret
-        'phone' => $faker->unique()->randomNumber(11),
+        'phone' => '077' . $faker->unique()->randomNumber(8),
         'department_id' => \App\Models\Department::inRandomOrder()->first()->id,
     ];
 });
