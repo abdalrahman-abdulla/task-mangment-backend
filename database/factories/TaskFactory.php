@@ -5,7 +5,7 @@
 use \App\Models\Task;
 use Faker\Generator as Faker;
 
-$factory->define(Task::class, function (Faker\Generator $faker) {
+$factory->define(Task::class, function (Faker $faker) {
     return [
         'title' => $faker->name,
         'description' => $faker->text,
